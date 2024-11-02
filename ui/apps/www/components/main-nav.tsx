@@ -26,7 +26,7 @@ export function MainNav() {
             pathname === "/docs" ? "text-foreground" : "text-foreground/60"
           )}
         >
-          Docs
+          Features
         </Link>
         <Link
           href="/docs/components"
@@ -38,7 +38,7 @@ export function MainNav() {
               : "text-foreground/60"
           )}
         >
-          Components
+          Store
         </Link>
         <Link
           href="/blocks"
@@ -49,7 +49,7 @@ export function MainNav() {
               : "text-foreground/60"
           )}
         >
-          Blocks
+          About
         </Link>
         <Link
           href="/charts"
@@ -61,7 +61,7 @@ export function MainNav() {
               : "text-foreground/60"
           )}
         >
-          Charts
+          Changelog
         </Link>
         <Link
           href="/themes"
@@ -72,7 +72,7 @@ export function MainNav() {
               : "text-foreground/60"
           )}
         >
-          Themes
+          Pricing
         </Link>
         <Link
           href="/examples"
@@ -83,18 +83,7 @@ export function MainNav() {
               : "text-foreground/60"
           )}
         >
-          Examples
-        </Link>
-        <Link
-          href="/colors"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/colors")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
-        >
-          Colors
+          Contact
         </Link>
       </nav>
     </div>
