@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
 import * as React from "react"
 import Link, { LinkProps } from "next/link"
 import { useRouter } from "next/navigation"
-import { ViewVerticalIcon } from "@radix-ui/react-icons"
+// import { ViewVerticalIcon } from "@radix-ui/react-icons"
 
 import { docsConfig } from "@/config/docs"
 import { siteConfig } from "@/config/site"
@@ -12,6 +13,7 @@ import { Icons } from "@/components/icons"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+// import { UrlObject } from "url"
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)
@@ -84,7 +86,7 @@ export function MobileNav() {
               <div key={index} className="flex flex-col space-y-3 pt-6">
                 <h4 className="font-medium">{item.title}</h4>
                 {item?.items?.length &&
-                  item.items.map((item) => (
+                  item.items.map((item: { href: any; disabled: any; title: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | Promise<React.AwaitedReactNode> | null | undefined; label: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined }) => (
                     <React.Fragment key={item.href}>
                       {!item.disabled &&
                         (item.href ? (
